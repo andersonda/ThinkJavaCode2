@@ -3,11 +3,8 @@ public class Variables {
     public static void main(String[] args) {
 
         String message;
-        int x;
-
-        String firstName;
-        String lastName;
         int hour, minute;
+        //  System.out.println(message); // not allowed, we cant use variables before anything is stored in them!
 
         message = "Hello!";  // give message the value "Hello!"
         hour = 11;           // assign the value 11 to hour
@@ -16,13 +13,9 @@ public class Variables {
         message = "123";     // legal
         // message = 123;    // not legal
 
-        String message2 = "Hello!";
-        int hour2 = 11;
-        int minute2 = 59;
-
         int a = 5;
-        int b = a;     // a and b are now equal
-        a = 3;         // a and b are no longer equal
+        int b = a;     // a and b are now equal: a = 5, b = 5
+        a = 3;         // a and b are no longer equal, a = 3, b = 5!
 
         String firstLine = "Hello, again!";
         System.out.println(firstLine);
@@ -36,8 +29,12 @@ public class Variables {
         System.out.print(minute);
         System.out.println(".");
 
+        System.out.println(1 + 2 + "Hello"); // the output is 3Hello
+
+        System.out.println("Hello" + 1 + 2); // the output is Hello12
+
         System.out.print("Number of minutes since midnight: ");
-        System.out.println(hour * 60 + minute);
+        System.out.println(hour * 60 + minute); // asumes hour is in the 24 hour format
 
         System.out.print("Fraction of the hour that has passed: ");
         System.out.println(minute / 60);
@@ -45,27 +42,26 @@ public class Variables {
         System.out.print("Percent of the hour that has passed: ");
         System.out.println(minute * 100 / 60);
 
+        // using the modulo (%) operator to separate total inches to feet and inches
+        int totalInches = 76;
+        int feet = 76 / 12; // yields 6, remember that integer division rounds down!
+        int inches = 76 % 12; // yields 4 because 76 = 6 * 12 + 4. In other words, 4 is the remainder when dividing
+        System.out.println("In " + totalInches + " inches there are " + feet + " feet with " + inches + " inches left over.");
+
         double pi;
         pi = 3.14159;
 
-        double minute3 = 59.0;
+        double minuteDouble = 59.0;
         System.out.print("Fraction of the hour that has passed: ");
-        System.out.println(minute3 / 60.0);
+        System.out.println(minuteDouble / 60.0);
 
+        // double y = 1 / 3; // incorrect
         double y = 1.0 / 3.0;  // correct
 
+        // these next two print lines should produce the same output, but they don't becase of the rounding errors in floating point numbers
         System.out.println(0.1 * 10);
         System.out.println(0.1 + 0.1 + 0.1 + 0.1 + 0.1
                          + 0.1 + 0.1 + 0.1 + 0.1 + 0.1);
-
-        double balance = 123.45;  // potential rounding error
-        int balance2 = 12345;     // total number of cents
-
-        System.out.println(1 + 2 + "Hello");
-        // the output is 3Hello
-
-        System.out.println("Hello" + 1 + 2);
-        // the output is Hello12
     }
 
 }
