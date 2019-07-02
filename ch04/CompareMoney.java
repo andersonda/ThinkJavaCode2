@@ -1,7 +1,9 @@
 public class CompareMoney{
 
   public static void main(String[] args){
-
+    compareMoney(1.0, 10.0);
+    compareMoney(100.0, 65.50);
+    compareMoney(1000.0, 1000.0);
   }
 
   public static void compareMoney(double aDollars, double bDollars){
@@ -14,7 +16,7 @@ public class CompareMoney{
                        " more dollars than Alyssa.");
     }
     if(aDollars == bDollars){
-      System.out.println("Both children have the same amount.")
+      System.out.println("Both children have " + aDollars + " dollars");
     }
   }
 }
