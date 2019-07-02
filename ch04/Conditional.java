@@ -11,6 +11,7 @@ public class Conditional {
     }
 
     public static void printFactsAboutX(int x){
+      // first, check whether x is even or odd
       if (x % 2 == 0) {
           System.out.println(x + " is even");
       }
@@ -18,6 +19,7 @@ public class Conditional {
           System.out.println(x + " is odd");
       }
 
+      // then, check whether x is positive, negative, or zero
       if (x > 0) {
           System.out.println(x + " is positive");
       }
