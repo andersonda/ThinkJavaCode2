@@ -8,8 +8,8 @@ public class Island {
     int radius = 25;   // Island radius
 
     // parachuting position
-    int x = 100;
-    int y = 204;
+    int x = 105;
+    int y = 90;
     System.out.println("Parachuting at (" + x + ", " + y + ")");
 
     // A wind blows us +5 x and -10 y
