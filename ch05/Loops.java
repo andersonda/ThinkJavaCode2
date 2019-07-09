@@ -3,6 +3,14 @@
  */
 public class Loops {
 
+    public static void plusplus() {
+        int i = 1;
+        while (i <= 5) {
+            System.out.println(i);
+            i++; // add 1 to i
+        }
+    }
+
     public static void countdown(int n) {
         while (n > 0) {
             System.out.println(n);
@@ -22,23 +30,15 @@ public class Loops {
         }
     }
 
-    public static void plusplus() {
-        int i = 1;
-        while (i <= 5) {
-            System.out.println(i);
-            i++; // add 1 to i
-        }
-    }
-
-    public static void appreciate() {
+    public static void evens() {
         int i = 2;
         while (i <= 8) {
             System.out.print(i + ", ");
             i += 2; // add 2 to i
         }
-        System.out.println("Who do we appreciate?");
     }
 
+    // ==== for loop examples below ====
     public static void loopvar() {
         int n;
         for (n = 3; n > 0; n--) {
