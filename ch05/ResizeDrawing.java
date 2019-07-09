@@ -15,8 +15,24 @@ public class ResizeDrawing {
       // }
 
       // draw a line of circles (using for loop)
-      for(int i = 0; i + 100 <= width; i++){
-        g.drawOval(x, 0, 100, 100);
+      for(int i = 0; i + 100 <= width; i += 10){
+        g.drawOval(i, 0, 100, 100);
+      }
+
+      // draw a line of circles at bottom
+      for(int i = 0; i + 100 <= width; i += 10){
+        g.drawOval(i, height - 100, 100, 100);
+      }
+
+      // draw a line of circles on the left side
+      for(int i = 0; i + 100 <= height; i += 10){
+        g.drawOval(0, i, 100, 100);
+      }
+
+      // draw a line of circles on the right side
+      for(int i = 0; i + 100 <= height; i += 10){
+        // to skip every third circle: if(i % 3 == 0) continue;
+        g.drawOval(width - 100, i, 100, 100);
       }
     }
 
