@@ -3,7 +3,21 @@ import javax.swing.*;
 
 public class ResizeDrawing {
     public static void draw(Graphics g, int width, int height) {
-      g.drawOval(x, 0, 100, 100);
+      // g.drawOval(0, 0, 100, 100); // circle in upper left corner of window
+      // g.drawOval(width / 2, height / 2, 100, 100); // circle with upper left "corner" in center of window
+      // g.drawOval(width / 2 - 50, height / 2 - 50, 100, 100); // circle with center in center of window
+
+      // draw a line of circles (using while loop)
+      // int x = 0;
+      // while (x + 100 <= width) {
+      //    g.drawOval(x, 0, 100, 100);
+      //   x += 10;
+      // }
+
+      // draw a line of circles (using for loop)
+      for(int i = 0; i + 100 <= width; i++){
+        g.drawOval(x, 0, 100, 100);
+      }
     }
 
     // Leave the main method alone! It just sets up the drawing window for you.
