@@ -19,6 +19,14 @@ public class Loops {
         System.out.println("Blastoff!");
     }
 
+    public static void evens() {
+        int i = 2;
+        while (i <= 8) {
+            System.out.print(i + ", ");
+            i += 2; // add 2 to i
+        }
+    }
+
     public static void sequence(int n) {
         while (n != 1) {
             System.out.println(n);
@@ -27,14 +35,6 @@ public class Loops {
             } else {                  // n is odd
                 n = n * 3 + 1;
             }
-        }
-    }
-
-    public static void evens() {
-        int i = 2;
-        while (i <= 8) {
-            System.out.print(i + ", ");
-            i += 2; // add 2 to i
         }
     }
 
