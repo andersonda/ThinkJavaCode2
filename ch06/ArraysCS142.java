@@ -4,6 +4,11 @@ public class ArraysCS142{
     System.out.println("Length of the array: " + someInts.length);
     System.out.println("First element: " + someInts[0]);
     System.out.println("Second element: " + someInts[1]);
+    System.out.print("The values of the array are: ");
+    for(int i = 0; i < someInts.length; i++){
+      System.out.print(someInts[i] + " ");
+    }
+    System.out.println();
     System.out.println("Last element: " + someInts[someInts.length - 1]);
     System.out.println("Sum of the elements in the array: " + sum(someInts));
     System.out.println("The largest element of the array: " + max(someInts));
