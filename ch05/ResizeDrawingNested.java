@@ -8,6 +8,13 @@ public class ResizeDrawingNested {
       //   g.drawOval(x, 0, 100, 100);
       // }
 
+      // a single row of red circles
+      // g.setColor(Color.RED);
+      // for(int x = 0; x + 100 <= width; x += 100){
+      //   g.fillOval(x, 0, 100, 100);
+      // }
+
+
       // fill window with white circles
       // for(int y = 0; y + 100 <= height; y += 100){
       //   for(int x = 0; x + 100 <= width; x += 100){
@@ -26,15 +33,30 @@ public class ResizeDrawingNested {
       // }
 
       // fill with circles increasing in hue, left to right, top to bottom
-      float hue = 0;
-      for (int y = 0; y + 100 < height; y = y + 100) {
-        for (int x = 0; x + 100 < width; x = x + 100) {
-          g.setColor(Color.getHSBColor(hue,1,1));
-          g.fillOval(x, y, 100, 100);
-          hue = hue + 1.0f / 64; // increase hue
-        }
+    //   float hue = 0;
+    //   for (int y = 0; y + 100 < height; y = y + 100) {
+    //     for (int x = 0; x + 100 < width; x = x + 100) {
+    //       g.setColor(Color.getHSBColor(hue,1,1));
+    //       g.fillOval(x, y, 100, 100);
+    //       hue = hue + 1.0f / 64; // increase hue
+    //     }
+    //   }
+    // }
+
+    // fill with circles increasing in hue, left to right, top to bottom
+    // this time, we make a "triangle" shape using the break statement
+    float hue = 0;
+    int stop = 0;
+    for (int y = 0; y + 100 < height; y = y + 100) {
+      for (int x = 0; x + 100 < width; x = x + 100) {
+        if(x + 100 >= width - stop) break;
+        g.setColor(Color.getHSBColor(hue,1,1));
+        g.fillOval(x, y, 100, 100);
+        hue = hue + 1.0f / 64; // increase hue
       }
+      stop += 100;
     }
+  }
 
     // Leave the main method alone! It just sets up the drawing window for you.
     public static void main(String[] args) {
