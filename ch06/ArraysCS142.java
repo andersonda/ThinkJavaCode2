@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class ArraysCS142{
   public static void main(String[] args){
     int[] someInts = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -13,6 +15,21 @@ public class ArraysCS142{
     System.out.println("Sum of the elements in the array: " + sum(someInts));
     System.out.println("The largest element of the array: " + max(someInts));
     System.out.println("The smallest element of the array: " + min(someInts));
+
+    // passes a reference to someInts so doubleArray can modify it!
+    System.out.println("the array before doubling: " + Arrays.toString(someInts));
+    // modify each element
+    for(int i = 0; i < someInts.length; i++){
+      someInts[i] =  someInts[i] * 2;
+    }
+    System.out.println("the array after doubling: " + Arrays.toString(someInts));
+
+    int[] otherInts = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 1};// new array has a duplicate
+
+    System.out.println("Does " + Arrays.toString(someInts) + " contain any duplicates?: "
+      + containsDuplicates(someInts));
+    System.out.println("Does " + Arrays.toString(otherInts) + " contain any duplicates?: "
+      + containsDuplicates(otherInts));
   }
 
   public static int sum(int[] array){
@@ -41,5 +58,17 @@ public class ArraysCS142{
       }
     }
     return smallestSoFar;
+  }
+
+  public static boolean containsDuplicates(int[] array){
+    for(int left = 0; left < array.length; left++){
+      for(int right = left + 1; right < array.length; right++){
+        // System.out.println("i = " + i + " j = " + j);
+        if(array[left] == array[right])
+          return true; // found a duplicate!
+      }
+    }
+    // looped through the whole array, found no duplicates
+    return false;
   }
 }
