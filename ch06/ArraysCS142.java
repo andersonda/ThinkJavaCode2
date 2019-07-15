@@ -7,6 +7,7 @@ public class ArraysCS142{
     System.out.println("First element: " + someInts[0]);
     System.out.println("Second element: " + someInts[1]);
     System.out.print("The values of the array are: ");
+    // could be replaced by Arrays.toString(someInts)
     for(int i = 0; i < someInts.length; i++){
       System.out.print(someInts[i] + " ");
     }
@@ -16,11 +17,12 @@ public class ArraysCS142{
     System.out.println("The largest element of the array: " + max(someInts));
     System.out.println("The smallest element of the array: " + min(someInts));
 
-    // passes a reference to someInts so doubleArray can modify it!
     System.out.println("the array before doubling: " + Arrays.toString(someInts));
-    // modify each element
+    // double each element
     for(int i = 0; i < someInts.length; i++){
-      someInts[i] =  someInts[i] * 2;
+      // we can modify array elements just like variables.
+      // arrays can be thought of as a collection of variables with the same type
+      someInts[i] = someInts[i] * 2;
     }
     System.out.println("the array after doubling: " + Arrays.toString(someInts));
 
