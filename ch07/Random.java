@@ -6,7 +6,7 @@ public class Random{
     System.out.println(Math.random());
     System.out.println(Math.random());
     System.out.println(Math.random());
-    // testing using Math.random to generate random numbers between 0 and 4
+    // testing using Math.random to generate random numbers between 1 and 5
     System.out.println((int)(Math.random()* 5));
     System.out.println((int)(Math.random()* 5));
     System.out.println((int)(Math.random()* 5));
