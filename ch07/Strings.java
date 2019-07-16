@@ -43,25 +43,7 @@ public class Strings {
         int index = fruit.indexOf('a');
         int index2 = fruit.indexOf('a', 2);
 
-        // String comparison
-
-        String name1 = "Alan Turing";
-        String name2 = "Ada Lovelace";
-        if (name1.equals(name2)) {
-            System.out.println("The names are the same.");
-        }
-
-        int diff = name1.compareTo(name2);
-        if (diff == 0) {
-            System.out.println("The names are the same.");
-        } else if (diff < 0) {
-            System.out.println("name1 comes before name2.");
-        } else if (diff > 0) {
-            System.out.println("name2 comes before name1.");
-        }
-
         // Substrings
-
         System.out.println(fruit.substring(0));
         System.out.println(fruit.substring(2));
         System.out.println(fruit.substring(6));
@@ -69,6 +51,21 @@ public class Strings {
         System.out.println(fruit.substring(0, 3));
         System.out.println(fruit.substring(2, 5));
         System.out.println(fruit.substring(6, 6));
+
+        // String comparison
+        String name1 = "Alan Turing";
+        String name2 = "Ada Lovelace";
+        if (name1.equals(name2)) {
+            System.out.println("The names are the same.");
+        }
+        int diff = name1.compareTo(name2);
+        if (diff == 0) {
+            System.out.println("The names are the same");
+        } else if (diff < 0) {
+            System.out.println(name1 + " comes before " + name2 + ", lexicographically");
+        } else if (diff > 0) {
+            System.out.println(name2 + " comes before " + name1 + ", lexicographically");
+        }
 
     }
 
