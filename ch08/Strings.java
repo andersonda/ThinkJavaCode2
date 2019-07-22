@@ -80,4 +80,20 @@ public class Strings {
         return r;
     }
 
+    public static boolean isPalindrome(String s) {
+      return s.equals(reverse(s));
+    }
+
+
+    public static String copy(String s) {
+      char[] c = s.toCharArray();
+      // Concatenate the characters into this variable:
+      String newString = "";
+      // Form a new string in a loop
+      for (int i = 0; i < c.length; i++) {
+          newString = newString + c[i];
+      }
+      // After the loop, return the new string
+      return newString;
+    }
 }
