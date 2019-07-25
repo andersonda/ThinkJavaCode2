@@ -14,10 +14,12 @@ public class Person{
         this(first, null);
   }
 
+  @Override
   public String toString() {
         return firstName + " " + lastName;
   }
 
+  @Override
   public boolean equals(Object object){
     if (object instanceof Person) {
       Person p = (Person) object;
