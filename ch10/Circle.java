@@ -1,5 +1,5 @@
 // David Anderson
-public class Circle{
+public class Circle extends Shape{
   double centerX, centerY;
   double radius;
 
@@ -26,5 +26,13 @@ public class Circle{
     double dy = centerY - c.centerY;
     double d = Math.sqrt(dx*dx + dy*dy);
     return d <= radius + c.radius;
+  }
+
+  public double area() {
+    double a = Math.PI * radius * radius;
+    return a;
+  }
+  public double perimeter() {
+    return 2 * Math.PI * radius;
   }
 }
