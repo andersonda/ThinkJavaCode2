@@ -9,11 +9,7 @@ public class Person{
         this.lastName = lastName;
         numberOfPeople++;
   }
-
-  public Person(String first) {
-        this(first, null);
-  }
-
+  
   @Override
   public String toString() {
         return firstName + " " + lastName;
