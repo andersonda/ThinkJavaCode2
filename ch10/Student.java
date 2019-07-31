@@ -12,5 +12,6 @@ public class Student extends Person {
        for(int i = 0; i < courses.length; i++){
           res += "\n" + courses[i];
        }
+       return res;
     }
 }
