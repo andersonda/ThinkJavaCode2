@@ -16,6 +16,8 @@ public class Variables {
         int a = 5;
         int b = a;     // a and b are now equal: a = 5, b = 5
         a = 3;         // a and b are no longer equal, a = 3, b = 5!
+        System.out.println(a);
+        System.out.println(b);
 
         String firstLine = "Hello, again!";
         System.out.println(firstLine);
@@ -23,6 +25,7 @@ public class Variables {
         System.out.print("The value of firstLine is ");
         System.out.println(firstLine);
 
+        // We will improve this tomorrow!
         System.out.print("The current time is ");
         System.out.print(hour);
         System.out.print(":");
