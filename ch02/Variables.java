@@ -13,6 +13,13 @@ public class Variables {
         message = "123";     // legal
         // message = 123;    // not legal
 
+        // We will improve this tomorrow!
+        System.out.print("The current time is ");
+        System.out.print(hour);
+        System.out.print(":");
+        System.out.print(minute);
+        System.out.println(".");
+
         int a = 5;
         int b = a;     // a and b are now equal: a = 5, b = 5
         a = 3;         // a and b are no longer equal, a = 3, b = 5!
@@ -22,15 +29,7 @@ public class Variables {
         String firstLine = "Hello, again!";
         System.out.println(firstLine);
 
-        System.out.print("The value of firstLine is ");
-        System.out.println(firstLine);
-
-        // We will improve this tomorrow!
-        System.out.print("The current time is ");
-        System.out.print(hour);
-        System.out.print(":");
-        System.out.print(minute);
-        System.out.println(".");
+        System.out.println("The value of firstLine is " + firstLine);
 
         System.out.println(1 + 2 + "Hello"); // the output is 3Hello
 
