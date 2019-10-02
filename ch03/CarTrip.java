@@ -10,9 +10,10 @@ public class CarTrip{
         System.out.println(); // create empty line
 
         System.out.println("Testing static method milesPerHour");
-        System.out.println(milesPerHour(1, 1)); // we want to go 1 mile in 1 hour, so we expect 1 mph to be the speed
+        System.out.println(milesPerHour(1, 1)); // we want to go 1 mile in 1 hour, so we expect 1 mph to be the average speed
         System.out.println(milesPerHour(300, 4)); // we want to go 300 miles in 4 hours, so the average speed we would need to go is 300/4 or 75 mph
         System.out.println(milesPerHour(100, 3)); // we want to go 100 miles in 3 hours, so we would need to be going 33 and 1/3 mph, note the fuzzyness of the answer
+        System.out.println(milesPerHour(200.5, 2)); // 200.5 miles in 2 hours, 100.25 mph average speed
         System.out.println(milesPerHour(100, 0)); // ERROR! cannot divide by zero. Program will output "Infinity"
         System.out.println();
 
@@ -34,7 +35,7 @@ public class CarTrip{
     public static double kilometersToMiles(double kilometers){
         double metersPerMile = 1609.344;
         int metersPerKilometer = 1000;
-        return kilometers * metersPerKilometer / metersPerMile;
+        return kilometers * metersPerKilometer / metersPerMile; // if returnType is not void, the last statement returns the result of the method
         // could also do return kilometers * 1000 / 1609.344
     }
 

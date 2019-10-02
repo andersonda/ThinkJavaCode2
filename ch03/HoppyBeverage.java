@@ -43,7 +43,6 @@ public class HoppyBeverage {
 
 
     System.out.println("Testing totalCost...");
-    double myGallons = 5;
     System.out.println("$" + totalCost(5));
     System.out.println("$" + totalCost(7));
     System.out.println("$" + totalCost(10));
