@@ -6,6 +6,6 @@ public class Candy{
     if (moneyInPocket >= costOfCandyBar)
       System.out.println("I'll buy it!");
     else
-      System.out.println("I don't have enough :(.)")
+      System.out.println("I don't have enough :(.")
   }
 }

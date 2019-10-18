@@ -10,6 +10,9 @@ public class Island {
     // parachuting position
     int x = 105;
     int y = 90;
+    // try treasure coordinate
+    // correct for wind
+    // correct for ice
     System.out.println("Parachuting at (" + x + ", " + y + ")");
 
     // A wind blows us +5 x and -10 y
@@ -25,6 +28,8 @@ public class Island {
       System.out.println("Oh no, you landed in the water!");
     }
     else {
+      // look at isInSquare!
+      // doesnt use chained iff because these two conditions are not mutually exclusive
       if (x >= 100 && x <= 110 && y >= 180 && y <= 195 ) {
         y = y - 4; // Slide -4 units
         System.out.println("You hit the patch of ice and slid to (" + x + ", " + y + ")");

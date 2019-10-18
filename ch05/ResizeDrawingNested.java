@@ -46,15 +46,15 @@ public class ResizeDrawingNested {
     // fill with circles increasing in hue, left to right, top to bottom
     // this time, we make a "triangle" shape using the break statement
     float hue = 0;
-    int stop = 0;
+    int stop = width;
     for (int y = 0; y + 100 < height; y = y + 100) {
       for (int x = 0; x + 100 < width; x = x + 100) {
-        if(x + 100 >= width - stop) break;
+        if(x + 100 >= stop) break;
         g.setColor(Color.getHSBColor(hue,1,1));
         g.fillOval(x, y, 100, 100);
         hue = hue + 1.0f / 64; // increase hue
       }
-      stop += 100;
+      stop -= 100;
     }
   }
 
