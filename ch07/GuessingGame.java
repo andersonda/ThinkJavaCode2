@@ -20,7 +20,7 @@ public class GuessingGame{
           if(characters[i] >= '1' && characters[i] <= '0' + differentDigits) {
             guess[i] = characters[i] - '0';
           }
-          else{
+          else{'n]mn'
             System.out.println(characters[i] + " is not a valid guess character! " +
               "Must be a digit between 1 and " + differentDigits);
             break;
