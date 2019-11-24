@@ -4,7 +4,7 @@ public class StockKeepingUnit{
 
   public StockKeepingUnit(String name, double price){
     if(price < 0){
-      throw new IllegalArgumentException();
+      throw new IllegalArgumentException(); // cause a runtime exception
     }
 
     this.name = name;

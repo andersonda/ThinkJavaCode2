@@ -1,0 +1,25 @@
+﻿RightTriangle class design activity
+
+Write a java class called RightTriangle that extends the abstract Shape class that we wrote in class. The following private properties should be defined for the RightTriangle class:
+
+private int x
+private int y
+private int width
+private int height
+private double hypotenuse
+
+Note that x and y refer to the x and y coordinates of the upper left corner of the right triangle.
+
+Next, include the following in the class:
+
+1. Write a 2 argument constructor with parameters for width and height. You should also calculate and initialize the hypotenuse using the width and height.
+
+2. Write getter methods for the x and y properties. Write a single setter method to set both the x and y properties.
+
+3. Write getters and setters for the width and height properties. Note that whenever the width and height are changed, the hypotenuse should be recomputed.
+
+4. Write a getter method for the hypotenuse property. There should not be a public setter method for the hypotenuse.
+
+5. Override the area() and perimeter() methods of the Shape class
+
+6. Write a method toRectangle() that returns a Rectangle object with the same x, y, width, and height as this RightTriangle object.

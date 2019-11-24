@@ -1,15 +1,15 @@
 // David Anderson
-public class Person{
-  public String firstName;
-  public String lastName;
-  public static int numberOfPeople;
+public class Person {
+  public String firstName; // should probably be private, we will talk about this later!
+  public String lastName; // should probably be private, we will talk about this later!
+  public static int numberOfPeople; // should probably be private, we will talk about this later!
 
   public Person(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
         numberOfPeople++;
   }
-  
+
   @Override
   public String toString() {
         return firstName + " " + lastName;
